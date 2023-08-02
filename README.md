@@ -9,4 +9,4 @@ Desenvolva uma aplicação em que:
     - desfazer (undo)
     - refazer (redo)
  
-  - LINK: https://github.com/nandokferrari/fernandev-react-challenge-01
+- LINK: https://github.com/nandokferrari/fernandev-react-challenge-01
