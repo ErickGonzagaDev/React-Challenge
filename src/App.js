@@ -12,21 +12,20 @@ function App() {
         ]);
     };
 
+    const undo = () => {
+        balls.pop();
+        setBalls([...balls]);
+    };
+
+    const redo = () => {
+        setBalls([]);
+    };
+
     return (
         <div className="app">
             <div className="buttons">
-                <button
-                    onClick={() =>
-                        setBalls(
-                            balls.filter(
-                                (item, index) => index !== balls.length - 1
-                            )
-                        )
-                    }
-                >
-                    Desfazer
-                </button>
-                <button onClick={() => setBalls([])}>Refazer</button>
+                <button onClick={undo}>Desfazer</button>
+                <button onClick={redo}>Refazer</button>
             </div>
             <div onMouseDown={createBall} className="campo">
                 {balls.map((item, index) => (
